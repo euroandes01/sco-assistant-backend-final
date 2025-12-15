@@ -7,21 +7,19 @@
 </head>
 <body>
 <div class="container">
+    <!-- Scrollable content -->
     <div id="scrollable-content">
         <h1>SCO Assistant</h1>
 
-        <!-- 1. Textarea -->
+        <!-- Document Type Selector -->
         <div class="section" id="input-section">
-            <h2>Paste SCO Document</h2>
-
-            <!-- Document Type Selector -->
             <label for="doc-type" style="font-size:0.9em; display:block; margin-bottom:5px;">
-               Document Type:
-               <select id="doc-type">
+                Document Type:
+                <select id="doc-type">
                     <option value="letter" selected>Letter / Contract (Default)</option>
                     <option value="sco">SCO / Soft Corporate Offer</option>
-                    <option value="document">Document</option> <!-- New choosable item -->
-               </select>
+                    <option value="document">Document</option>
+                </select>
             </label>
 
             <textarea id="sco-content" placeholder="Paste SCO document here..." rows="4"></textarea>
@@ -36,16 +34,34 @@
                 <span id="file-name">No file chosen</span>
             </div>
 
-            <!-- Analyze Button -->
-            <div class="section">
-                <button id="analyze-btn">Analyze SCO</button>
+            <!-- Premium Code -->
+            <div class="section" style="margin-top:10px;">
+                <input
+                    type="text"
+                    id="premium-code"
+                    placeholder="Premium code"
+                    style="width:140px; padding:5px; font-size:0.85em;"
+                >
+                <button id="premium-btn" style="margin-left:6px;">Activate</button>
             </div>
         </div>
 
-        <!-- 2. Report Results (will be filled after analysis) -->
-        <div class="section" id="report-section" style="display:none;">
-            <!-- Report content inserted by JS -->
+        <!-- Report Results (popup view) -->
+        <div class="section" id="report-section" style="display:none;"></div>
+
+        <!-- Hidden Help Button -->
+        <div id="help-container">
+            <button id="help-btn">Help</button>
+            <div id="help-content">
+                <p>Need help using SCO Assistant? Visit our support page:</p>
+                <a href="https://www.google.com/search?q=SCO+Assistant+help" target="_blank">Search Google for Help</a>
+            </div>
         </div>
+    </div>
+
+    <!-- Analyze button outside scrollable content -->
+    <div id="analyze-container">
+        <button id="analyze-btn">Analyze SCO</button>
     </div>
 </div>
 

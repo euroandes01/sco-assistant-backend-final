@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCO Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="popup-container">
+        <!-- Controls: File input + Analyze button -->
+        <div id="controls">
+            <input type="file" id="sco-file">
+            <span id="file-name">No file chosen</span>
+            <button id="analyze-btn">Analyze</button>
+        </div>
+
+        <!-- Scrollable content -->
+        <div id="scrollable-content">
+            <textarea id="sco-content" placeholder="Paste SCO content here"></textarea>
+            <div id="report-section"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

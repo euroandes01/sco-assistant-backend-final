@@ -1,14 +1,14 @@
 /* Fixed popup size */
 html, body {
     width: 325px;
-    height: 375px;
+    height: 400px;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* prevent double scrollbar */
+    overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
-/* Container for scrollable content */
+/* Container */
 .container {
     display: flex;
     flex-direction: column;
@@ -17,18 +17,22 @@ html, body {
     box-sizing: border-box;
 }
 
-/* Scrollable content only */
+/* Scrollable content */
 #scrollable-content {
-    flex: 1; /* take remaining height */
-    overflow-y: auto; /* vertical scroll here */
-    padding-right: 5px;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px;
 }
 
-/* Sections styling */
+/* Sections */
 .section {
     margin-bottom: 15px;
 }
 
+/* Textarea */
 textarea {
     width: 100%;
     resize: vertical;
@@ -37,7 +41,7 @@ textarea {
     box-sizing: border-box;
 }
 
-/* File upload label */
+/* File upload */
 .custom-file-upload {
     display: inline-block;
     padding: 5px 10px;
@@ -47,31 +51,12 @@ textarea {
     background-color: #f0f0f0;
 }
 
-/* Hide default file input text */
 .custom-file-upload input[type="file"] {
     display: none;
 }
 
 .custom-file-upload:hover {
     background-color: #e0e0e0;
-}
-
-/* Report table */
-.report-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.report-table td {
-    padding: 5px;
-    vertical-align: top;
-    border-bottom: 1px solid #ddd;
-}
-
-.explanation {
-    font-size: 0.75em;
-    color: #555;
-    margin-top: 2px;
 }
 
 /* Analyze button */
@@ -89,13 +74,20 @@ textarea {
     background-color: #0056b3;
 }
 
-/* Back button styling */
+/* Analyze container */
+#analyze-container {
+    padding: 8px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+/* Back button */
 #back-btn {
     padding: 8px 20px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #6c757d; /* gray color to differentiate from Analyze */
+    background-color: #6c757d;
     color: #fff;
     border: none;
     margin-top: 10px;
@@ -103,4 +95,23 @@ textarea {
 
 #back-btn:hover {
     background-color: #5a6268;
+}
+
+/* Hidden Help button */
+#help-container {
+    display: none;
+    margin-top: 5px;
+}
+
+#help-btn {
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+#help-content {
+    display: none;
+    margin-top: 5px;
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    font-size: 13px;
 }
