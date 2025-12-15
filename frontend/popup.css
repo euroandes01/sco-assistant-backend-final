@@ -4,7 +4,7 @@ html, body {
     height: 375px;
     margin: 0;
     padding: 0;
-    overflow: hidden;   /* prevent double scrollbar */
+    overflow: hidden; /* prevent double scrollbar */
     font-family: Arial, sans-serif;
 }
 
@@ -19,9 +19,9 @@ html, body {
 
 /* Scrollable content only */
 #scrollable-content {
-    flex: 1;              /* take remaining height */
-    overflow-y: auto;     /* vertical scroll here */
-    padding-right: 5px;   /* avoid overlap with scrollbar */
+    flex: 1; /* take remaining height */
+    overflow-y: auto; /* vertical scroll here */
+    padding-right: 5px;
 }
 
 /* Sections styling */
@@ -87,4 +87,20 @@ textarea {
 
 #analyze-btn:hover {
     background-color: #0056b3;
+}
+
+/* Back button styling */
+#back-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #6c757d; /* gray color to differentiate from Analyze */
+    color: #fff;
+    border: none;
+    margin-top: 10px;
+}
+
+#back-btn:hover {
+    background-color: #5a6268;
 }
